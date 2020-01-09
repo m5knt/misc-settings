@@ -1,0 +1,243 @@
+# ClangFormat 10.0.0.20191127
+# 本家ドキュメント http://clang.llvm.org/docs/ClangFormatStyleOptions.html
+# 翻訳サイト(3.9) http://algo13.net/clang/clang-format-style-oputions.html
+
+Language: Cpp              # None Cpp CSharp Java JavaScript ObjC Proto TableGen TextProto # 対象言語
+BasedOnStyle: Microsoft    # LLVM Google Chromium Mozilla WebKit Microsoft ## 踏襲スタイル
+
+#
+# A
+#
+
+AccessModifierOffset: -4 # public: protected: private: のインデント値
+
+AlignAfterOpenBracket: Align        # Align | DontAlign | AlwaysBreak 丸括弧内での改行時の並び方 機能していない?
+AlignConsecutiveAssignments: false  # ☆部で整列するか int foo☆= 1;
+AlignConsecutiveDeclarations: false # ☆部で整列するか int ☆foo = 1;
+AlignConsecutiveMacros: true        # マクロの連結部で整列するか
+AlignEscapedNewlines: Left          # エスケープ連結するマクロを定義時にエスケープ部の並び方
+AlignOperands: true                 # 行を分割時に2項演算や3項演算を整列するか
+AlignTrailingComments: true         # 行末コメントを整列するか
+
+AllowAllArgumentsOnNextLine: false               # 行を分割時に引数部を行に纏めるか false時は整列
+AllowAllConstructorInitializersOnNextLine: false # コンストラクタ初期化リストを行に纏めるか ConstructorInitializerAllOnOneLineOrOnePerLineがtrue時
+AllowAllParametersOfDeclarationOnNextLine: false # 引数宣言を行に纏めるか
+
+AllowShortBlocksOnASingleLine: false        # ドキュメントでは Never Empty Always だけと手元だとboolean値短いブロックを一行化するか
+AllowShortCaseLabelsOnASingleLine: false    # 短いcase文を一行化するか
+AllowShortFunctionsOnASingleLine: Inline    # None InlineOnly Empty Inline All ## 短い関数を一行化するか
+AllowShortIfStatementsOnASingleLine: Always # 短いif文を一行化するか
+AllowShortLambdasOnASingleLine: All         # 短いラムダ関数を一行化するか
+AllowShortLoopsOnASingleLine: true          # 短いループ文を一行化するか
+
+# AlwaysBreakAfterDefinitionReturnType      # Deplicated
+AlwaysBreakAfterReturnType: None            # None All TopLevel AllDefinitions TopLevelDefinitions 関数宣言関数定義時の戻り値型部での改行の仕方
+AlwaysBreakBeforeMultilineStrings: false    # 連続文字列リテラルの前に改行するか
+AlwaysBreakTemplateDeclarations: Yes        # No MultiLine Yes テンプレ後の改行の仕方
+
+#
+# B
+#
+
+#BasedOnStyle: string      # LLVM Google Chromium Mozilla WebKit Microsoft ## 踏襲スタイル
+BinPackArguments: true    # 行分割時に関数コールの引数部を行で纏めるか
+BinPackParameters: true    # 行分割時に関数宣言引数部を行で纏めるか
+# BraceWrapping:           # BreakBeforeBraces が Custom 時に個別で波括弧位置を制御
+#   AfterCaseLabel: boolean
+#   AfterClass: boolean
+#   AfterControlStatement: Never MultiLine Always
+#   BraceWrappingAfterControlStatementStyle: Never MultiLine Always
+#   AfterEnum: boolean
+#   AfterFunction: boolean
+#   AfterNamespace: boolean
+#   AfterObjCDeclaration: boolean
+#   AfterStruct: boolean
+#   AfterUnion: boolean
+#   AfterExternBlock: boolean
+#   BeforeCatch: boolean
+#   BeforeElse: boolean
+#   IndentBraces: boolean
+#   SplitEmptyFunction: boolean
+
+BreakAfterJavaFieldAnnotations: true      # java のアノテーションを改行するか
+BreakBeforeBinaryOperators: None          # None NonAssignment All ## 長い行での2項演算子の前で改行するか
+BreakBeforeBraces: WebKit                 # Attach Linux Mozilla Stroustrup Allman GNU WebKit Custom ## ブレースの並び方
+BreakBeforeTernaryOperators: true         # 三項演算子の前で改行するか
+BreakConstructorInitializers: BeforeComma # BeforeColon BeforeComma AlterColon ## コンストラクタ初期化リストの並び方
+BreakInheritanceList: BeforeColon         # BeforeColon BeforeComma AfterColon ## 基底の並び方
+BreakStringLiterals: true                 # 非連結文字列リテラルを許すか
+
+#
+# C
+#
+
+ColumnLimit: 120                                      # 行の文字数
+# CommentPragmas: '^ FOOBAR pragma:'                  # 特別なコメントを分割させない
+CompactNamespaces: false                              # namespace を行に纏める
+ConstructorInitializerAllOnOneLineOrOnePerLine: false # コンストラクタ初期化リストを一行化
+ConstructorInitializerIndentWidth: 4                  # コンストラクタ初期化リストのインデント数
+ContinuationIndentWidth: 4                            # 式を折り返す時のインデント数
+Cpp11BracedListStyle: true                            # 初期化リストの波括弧の内側の空白を無しにする
+
+#
+# D
+#
+
+#謎 DeriveLineEnding: true   # 改行を多数側にする 解決不能時は UseCRLF を使う
+DerivePointerAlignment: true # ポインタとリファレンスの位置を多数側にする 解決不能時は PointerAlignment を使う
+DisableFormat: false         # フォーマッタを抑制するか
+
+#
+# E
+#
+
+# ExperimentalAutoDetectBinPacking: false # 実験的フラグ 関数宣言と関数コールのルールを多数側にするか 
+
+#
+# F
+#
+
+FixNamespaceComments: true # namespace の閉じにコメントを入れる
+# ForEachMacros: [RANGES_FOR, BOOST_FOREACH] # foreach マクロを利用しているなら指定する
+
+#
+# I
+#
+
+IncludeBlocks: Preserve # Preserve Merge Regroup ## include ソート時の動作 Regroup 時は IncludeCategories を参照する
+# IncludeCategories: # include の並び順
+#  - Regex:           '^"(llvm|llvm-c|clang|clang-c)/'
+#    Priority:        2
+#    SortPriority:    2
+#  - Regex:           '^(<|"(gtest|gmock|isl|json)/)'
+#    Priority:        3
+#  - Regex:           '<[[:alnum:].]+>'
+#    Priority:        4
+#  - Regex:           '.*'
+#    Priority:        1
+#    SortPriority:    0
+
+# file-to-main-include マッピングで許可されているファイルのサフィックスを指定する
+#IncludeIsMainRegex: '$'                       # LLVM Mozilla WebKit
+#IncludeIsMainRegex: '([-_](test|unittest))?$' # Google Chromium
+
+#IncludeIsMainSourceRegex: ''        # フォーマットするソースを指定する
+
+IndentCaseLabels: false              # 次をインデントするか case Value:
+#謎IndentGotoLabels: true            # 次をインデントするか LABEL: 
+IndentPPDirectives: None             # None AfterHash BeforeHash ## プロプロセッサのインデント指定
+IndentWidth: 4                       # インデント文字数
+IndentWrappedFunctionNames: true     # 関数宣言に改行を含む時にインデントするか
+
+#
+# J
+#
+
+#JavaImportGroups: ['com.example', 'com', 'org'] # Javaのimport文のグループを指定する
+JavaScriptQuotes: Leave            # Leave Single Double ## クオートを揃えるか
+JavaScriptWrapImports: false       # JSのimportを整列するか
+
+#
+# K
+#
+
+KeepEmptyLinesAtTheStartOfBlocks: true # ブロック開始部の空行を維持するか Allman なら false 推奨
+
+#
+# M
+#
+
+#MacroBlockBegin: '^(MACRO_BEGIN)' # ブロックをマクロで定義する際の開始マクロを指定
+#MacroBlockEnd: '(MACRO_END)$'     # ブロックをマクロで定義する際の終了マクロを指定
+MaxEmptyLinesToKeep: 1             # 空行の維持数
+
+#
+# N
+#
+
+NamespaceIndentation: None # namespace 内のインデント
+# NamespaceMacros: ['NAMESPACE'] # namespace のマクロ???
+
+#
+# O
+#
+
+ObjCBinPackProtocolList: Never     # Auto Never Always プロトコルリストの並び方を指定
+ObjCBlockIndentWidth: 4            # ブロック内のインデント数
+ObjCSpaceAfterProperty: false      # ☆部に空白を入れるか @property☆(readonly) 
+ObjCSpaceBeforeProtocolList: false # ☆部に空白を入れるか foo☆<protocol>
+
+#
+# P
+#
+
+#謎PenaltyBreakAssignment: false               # ☆部が改行ならペナルティー foo☆=☆1
+#謎PenaltyBreakBeforeFirstCallParameter: false # ☆部が改行ならペナルティー foo(☆1)
+#謎PenaltyBreakComment: false                  # コメント内で改行ならペナルティーにする
+#謎PenaltyBreakFirstLessLess: false            # ☆部が改行ならペナルティー foo☆<<
+#謎PenaltyBreakString: false                   # ☆部が改行ならペナルティー ""☆""
+#謎PenaltyBreakTemplateDeclaration: false      # ☆部が改行ならペナルティー template<class T>☆
+#謎PenaltyExcessCharacter: false               # 列数制限越えをペナルティー
+#謎PenaltyReturnTypeOnItsOwnLine: false        # ☆部が改行ならペナルティー int☆foo()
+PointerAlignment: Right                      # Left | Right | Middle リファレンスとアスタをどちらに寄せるか
+
+#
+# R
+#
+
+#RawStringFormats: # 生文字列の書式
+# - Language: TextProto
+#     Delimiters:
+#       - 'pb'
+#       - 'proto'
+#     EnclosingFunctions:
+#       - 'PARSE_TEXT_PROTO'
+#     BasedOnStyle: google
+# - Language: Cpp
+#     Delimiters:
+#       - 'cc'
+#       - 'cpp'
+#     BasedOnStyle: llvm
+#     CanonicalDelimiter: 'cc'
+
+ReflowComments: false # コメントの折り返しをするか
+
+#
+# S
+#
+
+SortIncludes: false                     # #include をソートするか
+SortUsingDeclarations: false            # using をソートするか
+SpaceAfterCStyleCast: false             # ☆部に空白を入れるか (int)☆foo
+SpaceAfterLogicalNot: false             # ☆部に空白を入れるか !☆foo
+SpaceAfterTemplateKeyword: false        # ☆部に空白を入れるか template☆<>
+SpaceBeforeAssignmentOperators: true    # ☆部に空白を入れるか foo☆=1 foo☆+=1
+SpaceBeforeCpp11BracedList: true        # ☆部に空白を入れるか int[3]☆{}
+SpaceBeforeCtorInitializerColon: true   # ☆部に空白を入れるか foo::foo()☆: bar() {}
+SpaceBeforeInheritanceColon: true       # ☆部に空白を入れるか struct foo☆: bar {}l
+SpaceBeforeParens: ControlStatements    # ☆部に空白を入れるか if☆() { foo☆(); }
+SpaceBeforeRangeBasedForLoopColon: true # ☆部に空白を入れるか for (auto v☆: lists) {}
+#謎SpaceBeforeSquareBrackets: false     # ☆部に空白を入れるか int foo☆[5]
+#謎SpaceInEmptyBlock: false             # ☆部に空白を入れるか void foo() {☆}
+SpaceInEmptyParentheses: false          # ☆部に空白を入れるか void foo(☆) {}
+SpacesBeforeTrailingComments: 1         # ☆部の空白数        int foo()☆// 
+SpacesInAngles: false                   # ☆部に空白を入れるか static_cast<☆int☆>(foo)
+SpacesInCStyleCastParentheses: false    # ☆部に空白を入れるか (☆int☆)foo
+#謎SpacesInConditionalStatement: true   # ☆部に空白を入れるか if☆()☆{} for☆()☆{} while☆()☆{}
+SpacesInContainerLiterals: false        # ☆部に空白を入れるか var foo = [☆1, 2, 3☆]
+SpacesInParentheses: false              # ☆部に空白を入れるか (☆foo☆)
+SpacesInSquareBrackets: false           # ☆部に空白を入れるか int foo[☆5☆]
+Standard: Auto                          # Cpp03 Cpp11 Cpp14 Cpp17 Cpp20 Latest Auto 字句解析向けの言語仕様指定
+
+#
+# T
+#
+
+TabWidth: 4 # タブ文字数
+
+#
+# U
+#
+
+# エラーになる UseCRLF: true # 行末の種類 DeriveLineEnding が true の時に使われる
+UseTab: Never # タブを使うかどうか
