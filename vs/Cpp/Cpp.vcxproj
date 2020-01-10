@@ -150,7 +150,6 @@
     <ClCompile Include="Cpp.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\.editorconfig" />
     <None Include=".clang-format" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

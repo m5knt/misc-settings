@@ -1,4 +1,4 @@
-# VS の editorconfig ドキュメント https://docs.microsoft.com/ja-jp/visualstudio/ide/create-portable-custom-editor-options
+# VS editorconfig の ドキュメント https://docs.microsoft.com/ja-jp/visualstudio/ide/create-portable-custom-editor-options
 
 # root = true                      # 階層
 # indent_style = tab               # space tab インデントの仕方
@@ -9,7 +9,7 @@
 # trim_trailing_whitespace = false # 行末の空白を削除するか
 # insert_final_newline = false     # 空の最終行を入れるか
 
-# EditorGuidelines ドキュメント https://marketplace.visualstudio.com/items?itemName=PaulHarrington.EditorGuidelines
+# VS拡張 EditorGuidelines のドキュメント https://marketplace.visualstudio.com/items?itemName=PaulHarrington.EditorGuidelines
 # guidelines = 80, 120             # ガイドラインを引く位置
 
 #
