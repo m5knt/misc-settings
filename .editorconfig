@@ -1,10 +1,10 @@
 # VS editorconfig の ドキュメント https://docs.microsoft.com/ja-jp/visualstudio/ide/create-portable-custom-editor-options
 
-# root = true                      # 階層
+# root = true                      # 設定のルートになるか
 # indent_style = tab               # space tab インデントの仕方
 # indent_size = 4                  # インデント文字数
 # tab_width = 8                    # タブ幅の文字数
-# end_of_line = crlf               # lf crlf 改行コード
+# end_of_line = crlf               # lf crlf 改行コード 未設定ならネイティブ
 # charset = unset                  # latin1 utf-8 utf-8-bom utf-16be utf-16le unset 文字列エンコード
 # trim_trailing_whitespace = false # 行末の空白を削除するか
 # insert_final_newline = false     # 空の最終行を入れるか
