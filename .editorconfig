@@ -19,31 +19,45 @@
 root = true
 
 [*]
-indent_style = space
+indent_style = tab
 indent_size = 4
 tab_width = 8
 end_of_line = lf
 charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
-guidelines = 80, 81, 120, 121, 
+trim_trailing_whitespace = false
+insert_final_newline = false
+guidelines = 80, 120, 121, 160, 161, 162
 
 #
 #
 #
-
-[*.{bat,cmd}]
-end_of_line = crlf
-charset = unset
 
 [Makefile]
 indent_style = tab
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.{bat,cmd}]
+charset = unset
+end_of_line = crlf
+indent_style = space
+trim_trailing_whitespace = true
+insert_final_newline = true
 
 [*.{pch,inc,h,hpp,hxx,c,cc,cpp,cxx,m,mm}]
 charset = utf-8-bom
+indent_style = space
+trim_trailing_whitespace = true
+insert_final_newline = true
 
 [*.cs]
 charset = utf-8-bom
+indent_style = space
+trim_trailing_whitespace = true
+insert_final_newline = true
 
 [*.java]
 charset = utf-8-bom
+indent_style = space
+trim_trailing_whitespace = true
+insert_final_newline = true
