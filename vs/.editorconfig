@@ -1,0 +1,49 @@
+# VS の editorconfig ドキュメント https://docs.microsoft.com/ja-jp/visualstudio/ide/create-portable-custom-editor-options
+
+# root = true                      # 階層
+# indent_style = tab               # space tab インデントの仕方
+# indent_size = 4                  # インデント文字数
+# tab_width = 8                    # タブ幅の文字数
+# end_of_line = crlf               # lf crlf 改行コード
+# charset = unset                  # latin1 utf-8 utf-8-bom utf-16be utf-16le unset 文字列エンコード
+# trim_trailing_whitespace = false # 行末の空白を削除するか
+# insert_final_newline = false     # 空の最終行を入れるか
+
+# EditorGuidelines ドキュメント https://marketplace.visualstudio.com/items?itemName=PaulHarrington.EditorGuidelines
+# guidelines = 80, 120             # ガイドラインを引く位置
+
+#
+#
+#
+
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+tab_width = 8
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+guidelines = 80, 81, 120, 121, 
+
+#
+#
+#
+
+[*.{bat,cmd}]
+end_of_line = crlf
+charset = unset
+
+[Makefile]
+indent_style = tab
+
+[*.{pch,inc,h,hpp,hxx,c,cc,cpp,cxx,m,mm}]
+charset = utf-8-bom
+
+[*.cs]
+charset = utf-8-bom
+
+[*.java]
+charset = utf-8-bom
