@@ -21,6 +21,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".clang-format" />
-    <None Include="..\.editorconfig" />
+    <None Include="..\..\.editorconfig" />
   </ItemGroup>
 </Project>
