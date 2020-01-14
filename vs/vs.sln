@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		..\.editorconfig = ..\.editorconfig
 		..\.gitignore = ..\.gitignore
+		.vsconfig = .vsconfig
+	EndProjectSection
+	ProjectSection(FolderGlobals) = preProject
+		W_5_4p_4usr_4misc-settings_4vs_4_1vsconfig__JsonSchema = http://json-schema.org/config
 	EndProjectSection
 EndProject
 Global

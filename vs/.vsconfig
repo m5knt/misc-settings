@@ -1,0 +1,6 @@
+{
+    "//": "構成の共有方法 http://docs.microsoft.com/ja-jp/visualstudio/install/import-export-installation-configurations",
+    "version": "1.0",
+    "components": [
+    ]
+}
