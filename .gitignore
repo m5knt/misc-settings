@@ -15,3 +15,6 @@ x64
 # cs
 obj
 bin
+Debug
+Release
+

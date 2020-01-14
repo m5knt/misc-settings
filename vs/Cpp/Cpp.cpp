@@ -47,12 +47,12 @@
 
 // AlignConsecutiveMacros:
 #define SHORT_NAME FB
-#define LONG_NAME  FooBar
+#define LONG_NAME FooBar
 
 // AlignEscapedNewlines:
-#define A     \
-    int aaaa; \
-    int b;    \
+#define A                                                                                                              \
+    int aaaa;                                                                                                          \
+    int b;                                                                                                             \
     int dddddddddd;
 
 // IndentPPDirectives:
@@ -66,15 +66,19 @@
 // CompactNamespaces:
 // NamespaceIndentation:
 // NamespaceMacros:
-namespace NAMESPACE_1ST {
-namespace NAMESPACE_2ND {
+namespace NAMESPACE_1ST
+{
+namespace NAMESPACE_2ND
+{
 
-struct Base {
+struct Base
+{
 };
 
 // BreakInheritanceList:
 // SpaceBeforeInheritanceColon:
-class Derived : public Base {
+class Derived : public Base
+{
 
     // AccessModifierOffset:
 public:
@@ -85,9 +89,9 @@ public:
     // Cpp11BracedListStyle:
     // SpaceBeforeCtorInitializerColon:
     Derived()
-        : Base {}
-        , member0_ {1}
-        , member1_ {2}
+        : Base{}
+        , member0_{1}
+        , member1_{2}
     {
         // AlignConsecutiveAssignments:
         // AlignConsecutiveDeclarations:
@@ -131,18 +135,16 @@ public:
              9999999999);
 
         // AllowShortBlocksOnASingleLine:
-        while (true) {
-        }
+        while (true) {}
 
-        while (true) {
-            continue;
-        }
+        while (true) { continue; }
 
         // AllowShortCaseLabelsOnASingleLine:
         // IndentCaseLabels
         auto b = 0;
         auto x = 0;
-        switch (b) {
+        switch (b)
+        {
         case 1:
             x = 1;
             break;
@@ -152,7 +154,8 @@ public:
 
         // AllowShortIfStatementsOnASingleLine:
         if (a) return;
-        else {
+        else
+        {
             return;
         }
 
@@ -185,7 +188,8 @@ public:
 
         // KeepEmptyLinesAtTheStartOfBlocks:
         // MaxEmptyLinesToKeep
-        if (true) {
+        if (true)
+        {
 
             // ↑空の2行にしてフォーマット確認の事
         }
@@ -195,16 +199,14 @@ public:
         auto eee = !0;
 
         // SpaceBeforeCpp11BracedList
-        auto list = std::vector<int> {1, 2, 3, 4};
+        auto list = std::vector<int>{1, 2, 3, 4};
 
         // SpaceBeforeRangeBasedForLoopColon:
-        for ([[maybe_unused]] auto v : list) {
-            static_cast<void>(0);
-        }
+        for ([[maybe_unused]] auto v : list) { static_cast<void>(0); }
 
         // SpaceBeforeSquareBrackets:
         // SpacesInSquareBrackets:
-        int sq[5] {};
+        int sq[5]{};
 
         // SpaceBeforeSquareBrackets: エラー
         // SpaceInEmptyBlock: エラー
@@ -221,7 +223,8 @@ public:
     // AllowAllParametersOfDeclarationOnNextLine:
     // AlwaysBreakAfterReturnType:
     // BinPackParameters:
-    auto Func0(int aaaaaaaaaa, int bbbbbbbbbb, int cccccccccc, int dddddddddd, int eeeeeeeeee, int ffffffffff) -> auto
+    auto Func0(int aaaaaaaaaa, int bbbbbbbbbb, int cccccccccc, int dddddddddd, int eeeeeeeeee, int ffffffffff,
+               int gggggggggg) -> auto
     {
         static_cast<void>(aaaaaaaaaa);
         static_cast<void>(bbbbbbbbbb);
@@ -229,6 +232,7 @@ public:
         static_cast<void>(dddddddddd);
         static_cast<void>(eeeeeeeeee);
         static_cast<void>(ffffffffff);
+        static_cast<void>(gggggggggg);
         return;
     }
 
@@ -237,7 +241,8 @@ public:
                int cccccccccc, //
                int dddddddddd, //
                int eeeeeeeeee, //
-               int ffffffffff) //
+               int ffffffffff, //
+               int gggggggggg)  //
         -> auto
     {
         static_cast<void>(aaaaaaaaaa);
@@ -246,16 +251,19 @@ public:
         static_cast<void>(dddddddddd);
         static_cast<void>(eeeeeeeeee);
         static_cast<void>(ffffffffff);
+        static_cast<void>(gggggggggg);
         return;
     }
 
     // AllowShortFunctionsOnASingleLine:
-    auto Func(int a, int b) -> auto { return a + b; }
+    auto Func(int a, int b) -> auto
+    {
+        return a + b;
+    }
 
     // AlwaysBreakTemplateDeclarations:
     // SpaceAfterTemplateKeyword:
-    template<class... Args>
-    auto Call([[maybe_unused]] Args&&... args) -> auto
+    template <class... Args> auto Call([[maybe_unused]] Args&&... args) -> auto
     {
         return;
     }
@@ -266,9 +274,11 @@ public:
 
 // SortUsingDeclarations:
 using FastInteger = int_fast32_t;
-using LooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooongReturnType = int;
-// IndentWrappedFunctionNames: 効かない？
-LooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooongReturnType Func()
+using LoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooongReturnType =
+    int;
+// IndentWrappedFunctionNames:
+LoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooongReturnType
+    Func()
 {
     static_cast<void>(0);
     return 0;
