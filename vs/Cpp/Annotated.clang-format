@@ -1,9 +1,15 @@
-# ClangFormat 10.0.0.20191127
-# 本家ドキュメント http://clang.llvm.org/docs/ClangFormatStyleOptions.html
-# 翻訳サイト(3.9) http://algo13.net/clang/clang-format-style-oputions.html
-
-# VSドキュメント https://docs.microsoft.com/ja-jp/visualstudio/ide/reference/options-text-editor-c-cpp-formatting
-# VS2019 は標準で ClangFormat V5.0 をサポートしている
+# 本家ドキュメント clang-format 10 -- http://clang.llvm.org/docs/ClangFormatStyleOptions.html
+# 翻訳サイト clang-format 3.9 -- http://algo13.net/clang/clang-format-style-oputions.html
+# VS ドキュメント https://docs.microsoft.com/ja-jp/visualstudio/ide/reference/options-text-editor-c-cpp-formatting
+# VS デフォルトは VS2017 clang-format 6.0, VS2019 clang-format 9.0
+#
+# VS で最新を設定する手順
+#   https://marketplace.visualstudio.com/items?itemName=LLVMExtensions.ClangFormat
+#   をインストールし VS を再起動
+#   ツール => オプション => テキストエディター => C/C++ => 書式設定 =>全般
+#   カスタム clang-format.exe ファイルを使用します にチェック
+#   参照で %USERPROFILE%\AppData\Local\Microsoft\VisualStudio 以下にある
+#   clang-format.exe を指定する VS2017(15.0), VS2019(16.0) 系
 
 #
 # A

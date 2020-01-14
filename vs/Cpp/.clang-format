@@ -1,17 +1,12 @@
-# 本家ドキュメント clang-format 10 -- http://clang.llvm.org/docs/ClangFormatStyleOptions.html
-# 翻訳サイト clang-format 3.9 -- http://algo13.net/clang/clang-format-style-oputions.html
 
-# VSドキュメント https://docs.microsoft.com/ja-jp/visualstudio/ide/reference/options-text-editor-c-cpp-formatting
-# VS2017 clang-format 6.0
-# VS2019 clang-format 9.0
+TabWidth: 4                    # タブ文字数
+UseTab: Never                  # タブを使うかどうか
+UseCRLF: true                  # true
+ColumnLimit: 120               # 行の文字数
 
 BasedOnStyle: Microsoft        # LLVM Google Chromium Mozilla WebKit Microsoft ## 踏襲スタイル
 Language: Cpp                  # None Cpp CSharp Java JavaScript ObjC Proto TableGen TextProto # 対象言語
 Standard: Cpp11                # Cpp03 Cpp11 謎Cpp14 謎Cpp17 謎Cpp20 Latest Auto 字句解析向けの言語仕様指定
-TabWidth: 4                    # タブ文字数
-UseTab: Never                  # タブを使うかどうか
-ColumnLimit: 120               # 行の文字数
-
 AccessModifierOffset: -4                    # public: private: protected: のインデント数
 AllowShortBlocksOnASingleLine: true         # 短いブロックを一行化するか
 AllowShortIfStatementsOnASingleLine: Always # 短いif文を一行化するか
@@ -20,3 +15,4 @@ BreakConstructorInitializers: BeforeComma   # BeforeColon BeforeComma AlterColon
 DerivePointerAlignment: false               # ポインタとリファレンスの位置を多数側にする 解決不能時は PointerAlignment を使う
 IndentWrappedFunctionNames: true            # 関数宣言が折り返す時にインデントするか
 PointerAlignment: Left                      # Left | Right | Middle リファレンスとアスタをどちらに寄せるか
+
